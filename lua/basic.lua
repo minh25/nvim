@@ -1,1 +1,2 @@
-print("this is lua")
+vim.o.background = 'light'
+vim.g.mapleader = " "
