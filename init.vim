@@ -10,6 +10,8 @@ Plug 'romgrk/barbar.nvim'
 call plug#end()
 
 lua require("basic")
+lua require("navigate-config")
+
 lua require("nvim-tree-config")
 " lua require("buffer-line-config")
 lua require("vscode-config")
