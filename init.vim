@@ -6,6 +6,8 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'romgrk/barbar.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
@@ -19,3 +21,5 @@ lua require("nvim-tree-config")
 lua require("vscode-config")
 lua require("lualine-config")
 lua require("barbar-config")
+" lua require("indent-blankline-config")
+lua require("nvim-treesitter-config")
