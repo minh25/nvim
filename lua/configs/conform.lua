@@ -15,9 +15,8 @@ local options = {
     --   else
     --     return { "isort", "black" }
     --   end
-    -- end,
-    --
-    -- cpp = { "clang-format" },
+
+    cpp = { "clang-format" },
 
     ["*"] = { "codespell" },
 
