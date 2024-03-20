@@ -7,31 +7,39 @@ return {
     end,
   },
 
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
+  {
+    "mfussenegger/nvim-lint",
+    config = function()
+      require "configs.nvim-lint"
+    end,
+  },
 
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
-  --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "williamboman/mason.nvim",
+    -- config = function()
+    --   require "configs.mason"
+    -- end,
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require "configs.mason-lspconfig"
+    end,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require "configs.nvim-treesitter"
+    end,
+  },
 }
