@@ -5,9 +5,8 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>")
-
+map("n", "<leader>fr", "<cmd>NvimTreeToggle<CR>")
 
 map("i", "jj", "<ESC>")
 
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save in any mode"})
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save in any mode" })
