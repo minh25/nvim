@@ -9,13 +9,15 @@ local options = {
     "css-lsp",
     "prettier",
     "prettierd",
-    "eslint-d",
+    "eslint-lsp",
     "typescript-language-server",
 
     -- cpp
     "clang-format",
     "clangd",
   },
+
+  automatic_installation = true,
 }
 
 require("mason-lspconfig").setup(options)

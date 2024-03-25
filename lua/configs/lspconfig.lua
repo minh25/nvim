@@ -4,10 +4,28 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers =
-  { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "ruff_lsp", "golangci_lint_ls", "gopls", "lua_ls" }
+local servers = {
+  -- javascript
+  "html",
+  "cssls",
+  "tsserver",
+  "eslint",
 
--- lsps with default config
+  -- cpp
+  "clangd",
+
+  -- rust
+  "rust_analyzer",
+  "ruff_lsp",
+
+  -- go
+  "golangci_lint_ls",
+  "gopls",
+
+  -- lua
+  "lua_ls",
+}
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -16,12 +34,12 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.lua_ls.setup({
+lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
-        globals = {'vim'}
-      }
-    }
-  }
-})
+        globals = { "vim" },
+      },
+    },
+  },
+}
