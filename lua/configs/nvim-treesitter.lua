@@ -1,7 +1,7 @@
 local options = {
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 
-  sync_install = false,
+  sync_install = true,
 
   auto_install = true,
 
@@ -18,7 +18,6 @@ local vim = vim
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldenable = false
 
 function _G.foldtext()
