@@ -41,6 +41,7 @@ return {
     config = function()
       require "configs.nvim-treesitter"
     end,
+    build = ":TSUpdate",
   },
 
   {
@@ -48,7 +49,7 @@ return {
     config = function()
       require "configs.treesitter-context"
     end,
-    lazy = false,
+    event = "BufEnter",
   },
 
   {
